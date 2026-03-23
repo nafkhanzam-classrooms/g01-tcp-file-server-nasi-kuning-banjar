@@ -5,7 +5,7 @@
 | Nama           | NRP        | Kelas     |
 | ---            | ---        | ----------|
 |                |            |           |
-|                |            |           |
+|Hanif Aqil Janardana |5025241111 |D |
 
 ## Link Youtube (Unlisted)
 Link ditaruh di bawah ini
