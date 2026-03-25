@@ -4,7 +4,7 @@
 ## Anggota Kelompok
 | Nama           | NRP        | Kelas     |
 | ---            | ---        | ----------|
-|Severinus Fabian Tanuwidjaja |50252411110 |D |
+|Severinus Fabian Tanuwidjaja |5025241110 |D |
 |Hanif Aqil Janardana |5025241111 |D |
 
 ## Link Youtube (Unlisted)
