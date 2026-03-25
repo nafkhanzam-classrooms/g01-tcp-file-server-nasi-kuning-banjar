@@ -96,7 +96,7 @@ while True:
 ```
 #### Penjelasan
 server melakukan bind pada port 5000 dan akan menerima koneksi dengan satu client. Jika adal client lain yang ingin melakukan koneksi, maka akan masuk kedalam antrian yang nantinya akan langsung terkoneksi Ketika client sebelumnya disconnect. Server menghandle command dengan membagi pesan menjadi beberapa bagian. Untuk command `/list` server akan mengirimkan hasil listdir ke client. Untuk command `/upload` server akan menerima nama file dan ukurannya dari client yang kemudian menerima filenya.
-Untuk command `/download` server akan mencari filenya dan mengirimkan ukuran filenya terlebih dahulu lalu kemudian mengirim file tujuan.
+Untuk command `/download` server akan mencari filenya dan mengirimkan ukuran filenya terlebih dahulu kemudian mengirim file yang diminta.
 
 
 ### server-select.py
@@ -501,7 +501,7 @@ if __name__ == '__main__':
 
 ```
 #### Penjelasan
-select-thread.py memiliki fungsi-fungsi inti yang juga serupa dengan file server lainnya namun dengan file 5003. server-thread.py sesuai namanya menggunakan thread yang mana server membuat thread yang akan menghandle satu client dan thread baru lagi untuk client lain lagi. Jadi kode ini serupa dengan server-select.py namun tanpa mengecek kesiapan semua socket melainkan dengan menjalankan pembuatan thread dan meng-append-nya ke server.
+select-thread.py memiliki fungsi-fungsi inti yang juga serupa dengan file server lainnya namun dengan port 5003. server-thread.py sesuai namanya menggunakan thread yang mana server membuat thread yang akan menghandle satu client dan thread baru lagi untuk client lain lagi. Jadi kode ini serupa dengan server-select.py namun tanpa mengecek kesiapan semua socket melainkan dengan menjalankan pembuatan thread dan meng-append-nya ke server.
 
 ### client.py
 ```
