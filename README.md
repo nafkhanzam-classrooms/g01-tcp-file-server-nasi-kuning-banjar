@@ -95,6 +95,9 @@ while True:
         print(f"Disconnected: {addr}")
 ```
 #### Penjelasan
+server melakukan bind pada port 5000 dan akan menerima koneksi dengan satu client. Jika adal client lain yang ingin melakukan koneksi, maka akan masuk kedalam antrian yang nantinya akan langsung terkoneksi Ketika client sebelumnya disconnect. Server menghandle command dengan membagi pesan menjadi beberapa bagian. Untuk command `/list` server akan mengirimkan hasil listdir ke client. Untuk command `/upload` server akan menerima nama file dan ukurannya dari client yang kemudian menerima filenya.
+Untuk command `/download` server akan mencari filenya dan mengirimkan ukuran filenya terlebih dahulu lalu kemudian mengirim file tujuan.
+
 
 ### server-select.py
 ```
@@ -663,6 +666,7 @@ client_socket.close()
 print("Disconnected.")
 ```
 #### Penjelasan
+Sebelum connect ke server client.py akan meminta input host dan port tujuan. Kemudian client akan membuat thread yang akan digunakan untuk menerima broadcast dari server. Client kemudian mengirimkan pesan atau command kepada server tujuan. Untuk command `/list` client akan menerima respon dari server yeng kemudian di print. Untuk command `/upload` client akan mengirimkan pesan dengan nama file dan ukuran untuk server-sync.py atau nama file saja untuk server lainnya lalu mengirimkan file ke server. Untuk command `/download` client akan mengirimkan nama file lalu menerima ukuran file dari server lalu menerima file yang dikirimkan. Untuk pesan selain command maka akan dikirimkan sebagai string yang kemudian di broadcast oleh server
 
 ## Screenshot Hasil
 
