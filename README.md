@@ -205,9 +205,9 @@ while True:
 
 ```
 #### Penjelasan
-    server-select.py mengimport library select. Proses binding dan listening dilakukan seperti biasa, perbedaan utama berada di hadirnya list pending_upload untuk menyimpan data file yang diupload oleh client dan dikelola dalam while loop.
-    While loop dimulai dengan mencari client dan menerima koneksi client, jika ada maka server akan melakukan koneksi terhadap client. Jika belum terdeteksi adanya data pada read_ready, maka server akan mencoba melakukan receive data. Jika tidak ada data yang terjadi maka server akan terputus dari client. Pengaturan dari upload akan dicek dari pending_upload yang akan mengurai data file sehingga dikirimkan per chunk yang sesuai. Untuk mengatasi setiap command yang diberikan (/list, /upload, /download), kami membuat handler dengan mengecek input spesifik dari user seperti pada server-sync.py.
-    Perbedaan lain yang terlihat dibanding dengan server-select.py adalah adanya broadcast yang terjadi ketika client menginput selain dari command yang diberikan sebelumnya. Di proses ini, client mengirimkan segala hal yang dia tulis, diterima server, dan disebarkan server ke semua client yang saat itu sedang terkoneksi dengannya. Dengan ini, client bisa mengetahui asal dari setiap pesan yang diterima.
+server-select.py mengimport library select. Proses binding dan listening dilakukan seperti biasa, perbedaan utama berada di hadirnya list pending_upload untuk menyimpan data file yang diupload oleh client dan dikelola dalam while loop.
+While loop dimulai dengan mencari client dan menerima koneksi client, jika ada maka server akan melakukan koneksi terhadap client. Jika belum terdeteksi adanya data pada read_ready, maka server akan mencoba melakukan receive data. Jika tidak ada data yang terjadi maka server akan terputus dari client. Pengaturan dari upload akan dicek dari pending_upload yang akan mengurai data file sehingga dikirimkan per chunk yang sesuai. Untuk mengatasi setiap command yang diberikan (`/list`, `/upload`, `/download`), kami membuat handler dengan mengecek input spesifik dari user seperti pada server-sync.py.
+Perbedaan lain yang terlihat dibanding dengan server-select.py adalah adanya broadcast yang terjadi ketika client menginput selain dari command yang diberikan sebelumnya. Di proses ini, client mengirimkan segala hal yang dia tulis, diterima server, dan disebarkan server ke semua client yang saat itu sedang terkoneksi dengannya. Dengan ini, client bisa mengetahui asal dari setiap pesan yang diterima.
     
 ### server-poll.py
 ```
