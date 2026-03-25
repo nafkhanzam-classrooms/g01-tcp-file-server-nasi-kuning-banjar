@@ -15,33 +15,33 @@ https://youtu.be/BK9EluVqiF8
 
 ## Penjelasan Program
 ### server-sync.py
-``
+```
 
-``
+```
 #### Penjelasan
 
 ### server-select.py
-``
+```
 
-``
+```
 #### Penjelasan
 
 ### server-poll.py
-``
+```
 
-``
+```
 #### Penjelasan
 
 ### server-thread.py
-``
+```
 
-``
+```
 #### Penjelasan
 
 ### client.py
-``
+```
 
-``
+```
 #### Penjelasan
 
 ## Screenshot Hasil
