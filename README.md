@@ -205,8 +205,10 @@ while True:
 
 ```
 #### Penjelasan
-server-select.py mengimport library select. Proses binding dan listening dilakukan seperti biasa, perbedaan utama berada di hadirnya list pending_upload untuk menyimpan data file yang diupload oleh client dan dikelola dalam while loop.
+server-select.py mengimport library select. Proses binding dan listening dilakukan seperti biasa dengan port 5001, perbedaan utama berada di hadirnya list pending_upload untuk menyimpan data file yang diupload oleh client dan dikelola dalam while loop.
+
 While loop dimulai dengan mencari client dan menerima koneksi client, jika ada maka server akan melakukan koneksi terhadap client. Jika belum terdeteksi adanya data pada read_ready, maka server akan mencoba melakukan receive data. Jika tidak ada data yang terjadi maka server akan terputus dari client. Pengaturan dari upload akan dicek dari pending_upload yang akan mengurai data file sehingga dikirimkan per chunk yang sesuai. Untuk mengatasi setiap command yang diberikan (`/list`, `/upload`, `/download`), kami membuat handler dengan mengecek input spesifik dari user seperti pada server-sync.py.
+
 Perbedaan lain yang terlihat dibanding dengan server-select.py adalah adanya broadcast yang terjadi ketika client menginput selain dari command yang diberikan sebelumnya. Di proses ini, client mengirimkan segala hal yang dia tulis, diterima server, dan disebarkan server ke semua client yang saat itu sedang terkoneksi dengannya. Dengan ini, client bisa mengetahui asal dari setiap pesan yang diterima.
     
 ### server-poll.py
@@ -336,6 +338,7 @@ while True:
 
 ```
 #### Penjelasan
+server-poll.py memiliki struktur yang hampir sama dengan server-select.py dengan menggunakan port 5002. Perbedaannya adalah dari aplikasi poll itu sendiri yang merupakan versi lebih lanjut dari select. Pada file ini, kami tidak meggunakan input_socket melainkan register poll_obj yang bisa menyimpan data tanpa harus mereset di setiap loopingnya. Selain itu, penggunaan POLLIN, POLLHUB, POLLERR membantu pendeteksian data dari client, dibantu dengan pemetaan file deskriptor (fd_map).
 
 ### server-thread.py
 ```
@@ -498,6 +501,7 @@ if __name__ == '__main__':
 
 ```
 #### Penjelasan
+select-thread.py memiliki fungsi-fungsi inti yang juga serupa dengan file server lainnya namun dengan file 5003. server-thread.py sesuai namanya menggunakan thread yang mana server membuat thread yang akan menghandle satu client dan thread baru lagi untuk client lain lagi. Jadi kode ini serupa dengan server-select.py namun tanpa while loop melainkan dengan menjalankan pembuatan thread dan meng-append-nya ke server.
 
 ### client.py
 ```
