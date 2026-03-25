@@ -501,7 +501,7 @@ if __name__ == '__main__':
 
 ```
 #### Penjelasan
-select-thread.py memiliki fungsi-fungsi inti yang juga serupa dengan file server lainnya namun dengan file 5003. server-thread.py sesuai namanya menggunakan thread yang mana server membuat thread yang akan menghandle satu client dan thread baru lagi untuk client lain lagi. Jadi kode ini serupa dengan server-select.py namun tanpa while loop melainkan dengan menjalankan pembuatan thread dan meng-append-nya ke server.
+select-thread.py memiliki fungsi-fungsi inti yang juga serupa dengan file server lainnya namun dengan file 5003. server-thread.py sesuai namanya menggunakan thread yang mana server membuat thread yang akan menghandle satu client dan thread baru lagi untuk client lain lagi. Jadi kode ini serupa dengan server-select.py namun tanpa mengecek kesiapan semua socket melainkan dengan menjalankan pembuatan thread dan meng-append-nya ke server.
 
 ### client.py
 ```
