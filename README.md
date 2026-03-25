@@ -665,3 +665,39 @@ print("Disconnected.")
 #### Penjelasan
 
 ## Screenshot Hasil
+
+Kondisi awal folder
+
+<img width="213" height="181" alt="image" src="https://github.com/user-attachments/assets/c4907dbd-c4d7-4278-9329-f7db1b9a0ebf" />
+
+server-sync.py
+
+<img width="1395" height="352" alt="image" src="https://github.com/user-attachments/assets/2e831e1d-00de-4dd6-9b2d-656b0ed8661a" />
+
+Kondisi folder terbaru
+
+<img width="223" height="241" alt="image" src="https://github.com/user-attachments/assets/19266d55-08d6-4028-a186-25f0ce821d22" />
+
+server-select.py
+
+<img width="1497" height="468" alt="image" src="https://github.com/user-attachments/assets/a9ac3071-f0bf-4e83-8aac-b038772dba37" />
+
+Kondisi folder terbaru
+
+<img width="224" height="308" alt="image" src="https://github.com/user-attachments/assets/383dbfe1-2f04-4221-980b-f6ae24d9a877" />
+
+server-poll.py
+
+<img width="1468" height="469" alt="image" src="https://github.com/user-attachments/assets/8481376b-8dde-4788-bf5e-28b1fa387ee4" />
+
+kondisi folder terbaru
+
+<img width="227" height="376" alt="image" src="https://github.com/user-attachments/assets/5e86e02b-dcce-44ba-b1d9-5bb28dd98180" />
+
+server-thread.py
+
+<img width="1470" height="435" alt="image" src="https://github.com/user-attachments/assets/ea437ae6-57f3-4ccc-89aa-98f726d97edd" />
+
+Kondisi folder terbaru
+
+<img width="222" height="368" alt="image" src="https://github.com/user-attachments/assets/3af6ef15-1561-4d89-8ea8-a75bf32af66d" />
